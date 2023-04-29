@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/videogame.css">
+		<link rel="stylesheet" href="css/validation.css">
+		<title>Videojuego</title>
+	</head>
+	<body>
+		<div id="menu">
+			<h3>Jugador</h3>
+			<p id="name">Nombre</p>
+			<h3>Puntos</h3>
+			<p id="score">0</p>
+		</div>
+
+		<div id="screen">
+			<div id="board">
+			</div>
+		</div>
+
+		<form id="controlPanel" method="post" action="videogame.html">
+			<label for="nameForm">Nuevo nombre</label>
+			<input id="nameForm">
+			<p id="nameError" class="validationError"></p>
+			<label for="dificultad">Dificultad:</label>
+			<select name="dificultad" id="dificultad">
+				<option value="facil">Fácil</option>
+				<option value="medio" selected>Medio</option>
+				<option value="dificil">Difícil</option>
+			</select>
+			<input type="submit" value="Actualizar valores">
+		</form>
+
+	</body>
+	<script src="js/videogame.js"></script>
+	<script src="js/validation.js"></script>
+</html>

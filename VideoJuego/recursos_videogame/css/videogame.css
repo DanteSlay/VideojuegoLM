@@ -1,0 +1,56 @@
+#screen {
+	margin: 0;
+	padding: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#board {
+	width: 820px;
+	height: 504px;
+	background-color: lightgrey;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#menu {
+	margin-left: 20px;
+	padding: 5px;
+	width: 180px;
+	height: 280px;
+	float:left;
+	border-style: dashed;
+	border-color: purple;
+	border-width: 5px;
+}
+
+#controlPanel {
+	float: left;
+	width: 580px;
+	margin: 5px;
+	padding: 5px;
+
+}
+
+.cell {
+	box-sizing: border-box;
+	margin: 5px;
+	width: 14px;
+	height: 14px;
+	border-radius: 100%;
+}
+
+.target {
+	background-color: red;
+}
+
+.miss {
+	background-color: black;
+}
+
+.hit {
+	background-color: green;
+}
