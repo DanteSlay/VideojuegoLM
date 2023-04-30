@@ -1,3 +1,4 @@
+let ranking = JSON.parse(localStorage.getItem('ranking')) || [];
     let numObjetivos = 0;
     const board = document.getElementById("board");
 
@@ -34,6 +35,7 @@
     const CLASSACIERTO = 'hit';
     const CLASSFALLO = 'miss';
     const CLASSBLANCO = 'target';
+    const DIFICULTADDEF = 'medio'
 
 
 
@@ -44,6 +46,8 @@
         puntosAcierto: ACIERTOPUNT,
         blanco: BLANCO,
         jugador: JUGADOR,
+        dificultadJuego: DIFICULTADDEF,
+
 
     }
 
@@ -144,17 +148,23 @@ form.onsubmit = (e) => {
     e.preventDefault();
     const jugador = document.getElementById("nameForm");
     const dificultad = document.getElementById("dificultad");
+    console.log(
+        dificultad
+    )
 
     const nombre = jugador.value;
+    const dificultadElegida = dificultad.value;
     jugador.value = '';
 
     document.getElementById("name").innerText = nombre;
 
     iniciar();
 
-    if (dificultad.value === "dificil") {
+    juego.dificultadJuego = dificultadElegida;
+
+    if (dificultadElegida === "dificil") {
         juego.objetivoPorMinuto = 80;
-    }else if (dificultad.value === "medio") {
+    }else if (dificultadElegida === "medio") {
         juego.objetivoPorMinuto = 65;
     } else {
         juego.objetivoPorMinuto = 50;
@@ -167,14 +177,34 @@ form.onsubmit = (e) => {
         contador += tiempoEspera;
         if (contador >= 30 * 1000) {
             clearInterval(interval);
+
+            let player = {
+                nombrePlayer: juego.nombreJugador,
+                puntuacion: juego.puntos,
+                dificultad: juego.dificultadJuego,
+            }
+
+            ranking.push(player);
+            localStorage.setItem('ranking', JSON.stringify(ranking));
+
+            setTimeout(() => {
+                const puntuaciones = document.getElementById("menu");
+                puntuaciones.innerHTML = '';
+
+                const h3 = document.createElement('h3');
+                h3.innerText = 'PUNTUACIONES'
+                puntuaciones.appendChild(h3);
+
+                ranking.forEach((puntuacion) => {
+                    const li = document.createElement('li');
+                    li.innerText = `${puntuacion.nombrePlayer}: ${puntuacion.puntuacion} ${puntuacion.dificultad}`;
+                    puntuaciones.appendChild(li);
+                })
+            }, 1000);
         }
     }, tiempoEspera);
 
     document.getElementById(crearBlanco(juego.objetivoCorrecto)).classList.remove(CLASSBLANCO);
-
-
-    const puntosTotal = juego.puntos;
-    console.log(NUMOBJETIVOS);
 
 };
 

@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f36de1b-0cd6-4afd-911d-8452f7c1fad3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScript.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tabla/.idea/Tabla.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VideoJuego/.idea/VideoJuego.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/JS/.idea/JS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VideoJuego/recursos_videogame/js/videogame.js" beforeDir="false" afterPath="$PROJECT_DIR$/VideoJuego/recursos_videogame/js/videogame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VideoJuego/recursos_videogame/videogame.html" beforeDir="false" afterPath="$PROJECT_DIR$/VideoJuego/recursos_videogame/videogame.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +59,7 @@
       <workItem from="1682626154816" duration="4486000" />
       <workItem from="1682695184157" duration="160000" />
       <workItem from="1682695361982" duration="108000" />
-      <workItem from="1682695487300" duration="6585000" />
+      <workItem from="1682695487300" duration="7727000" />
     </task>
     <servers />
   </component>
